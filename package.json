@@ -1,0 +1,19 @@
+{
+  "name": "fabricefleche_3_09032022",
+  "version": "1.0.0",
+  "description": "\"\"",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./SCSS/main.scss:./CSS/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabriceFleche/FabriceFleche_3_09032022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FabriceFleche/FabriceFleche_3_09032022/issues"
+  },
+  "homepage": "https://github.com/FabriceFleche/FabriceFleche_3_09032022#readme"
+}
