@@ -3,7 +3,7 @@
 .titre {
     width: 200px;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 20px;
     &__img {
         object-fit: cover;
@@ -16,6 +16,9 @@
     display: flex;
     justify-content: center;
     background-color: $color-grisfonce;
+    &__logo {
+        padding-right: 10px;
+    }
 }
 
 .presentation {
@@ -33,36 +36,50 @@
 }
 
 main h2 {
-    margin-left: 10px;
+    margin-left: 20px;
+}
+
+#fonctionnement {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .fonctionnement {
     display: flex;
-    margin: 20px;
-    border: solid 1px;
+    margin: 20px 20px 20px 30px;
+    border: solid 0px $color-grisfonce;
     border-radius: 20px;
     background-color: $color-grisclair;
+    align-items: center;
+    box-shadow: 5px 5px 14px $color-grisclair;
     &__numero {
         border: solid 1px;
         border-radius: 50%;
-        padding: 5px;
-        margin-left: -10px;
+        padding: 6px 10px;
+        margin-left: -15px;
         background-color: $color-primary;
+    }
+    &__logo {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: x-large;
     }
     &__texte {
         font-weight: bold;
+        font-size: large;
     }
     &--pink {
-        background-color: $color-secondary;        
+        background-color: $color-violetpale;        
     }
     &--pinklogo {
         color: $color-primary;
     }
-
 }
 
 .restaurant {
     background-color: $color-grisclair;
+    padding-top: 40px;
+    padding-bottom: 40px;
     &__paris {
         border: solid 0px;
         border-radius: 20px;
@@ -76,7 +93,7 @@ main h2 {
             justify-content: space-between;
             margin: 10px;
             &__coeur {
-                color: rgb(84, 8, 8);
+                color: $color-primary;
             }
         }
         &__paris__img {
@@ -88,6 +105,16 @@ main h2 {
                 width: 100%;
                 height: 200px;
                 border-radius: 20px 20px 0px 0px;
+                position: relative;
+                &--texte {
+                    position: absolute;
+                    border: solid 1px;
+                    background: $color-vertclair;
+                    color: $color-vertfonce;
+                    padding: 5px 10px;
+                    left: 70%;
+                    margin-top: 10px;
+                }
             }
           
 }    
