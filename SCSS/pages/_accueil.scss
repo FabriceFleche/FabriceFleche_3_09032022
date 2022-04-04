@@ -1,9 +1,93 @@
 /* Accueil */
 
-.reservez {
-    color: $color-primary;
+.titre {
+    width: 200px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
 }
 
-.decouvrez {
-    color: $color-primary;
+.rechercheville {
+    display: flex;
+    justify-content: center;
+    background-color: $color-grisfonce;
 }
+
+.presentation {
+    background-color: $color-grisclair;
+    text-align: center;
+    padding: 30px;
+    &__explorer {
+        border: solid 1px;
+        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+        color: $color-blanc;
+        border-radius: 40px;
+        padding: 20px;
+        margin: 40px;
+    }
+}
+
+main h2 {
+    margin-left: 10px;
+}
+
+.fonctionnement {
+    display: flex;
+    margin: 20px;
+    border: solid 1px;
+    border-radius: 20px;
+    background-color: $color-grisclair;
+    &__numero {
+        border: solid 1px;
+        border-radius: 50%;
+        padding: 5px;
+        margin-left: -10px;
+        background-color: $color-primary;
+    }
+    &__texte {
+        font-weight: bold;
+    }
+    &--pink {
+        background-color: $color-secondary;        
+    }
+    &--pinklogo {
+        color: $color-primary;
+    }
+
+}
+
+.restaurant {
+    background-color: $color-grisclair;
+    &__paris {
+        border: solid 0px;
+        border-radius: 20px;
+        margin: 20px;
+        background-color: $color-blanc;
+    }
+        &__paris__bloc {
+            color: $color-noir;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px;
+            &__coeur {
+                color: rgb(84, 8, 8);
+            }
+        }
+        &__paris__img {
+            display: flex;
+            height: 200px;
+        }
+            &__paris__img__image {
+                object-fit: cover;
+                width: 100%;
+                height: 200px;
+                border-radius: 20px 20px 0px 0px;
+            }
+          
+}    
