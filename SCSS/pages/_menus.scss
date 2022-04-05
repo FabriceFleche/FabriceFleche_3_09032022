@@ -35,11 +35,13 @@ main {
     background-color: $color-grisclair;
     border-radius: 50px 50px 0px 0px;
     margin-top: -40px;
+    padding-bottom: 30px;
     position: relative;
 }
 
 .plat__intitule {
-    border: solid 1px;
+    border: solid 0px;
+    box-shadow: 5px 5px 14px $color-grisfonce;
     margin: 20px;
     padding-left: 10px;
     border-radius: 20px;
@@ -48,4 +50,14 @@ main {
         display: flex;
         justify-content: space-between;
     }
+}
+
+.btn {
+    text-align: center;
+    border: solid 1px;
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    color: $color-blanc;
+    border-radius: 40px;
+    padding: 20px;
+    margin: 40px 80px 20px 80px;
 }

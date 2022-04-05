@@ -4,8 +4,10 @@
     padding: 20px 0px 20px 10px;
     &__bloc {
         display: flex;
-    }
-        &__bloc__icone {
+        margin-top: -15px;
+        margin-bottom: -15px;
+       &__icone {
             margin-right: 10px;
         }
+    }    
 }
