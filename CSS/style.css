@@ -10,8 +10,27 @@ footer a {
   color: white;
 }
 
+/* Header */
+.titre {
+  width: 200px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+.titre__img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.titremenu__arrow {
+  margin-left: 20px;
+}
+
+/*Footer*/
 .footer {
-  background-color: rgb(112, 109, 109);
+  background-color: rgb(75, 73, 73);
   color: white;
   padding: 20px 0px 20px 10px;
 }
@@ -25,18 +44,6 @@ footer a {
 }
 
 /* Accueil */
-.titre {
-  width: 200px;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-.titre__img {
-  object-fit: cover;
-  width: 100%;
-  height: auto;
-}
-
 .rechercheville {
   display: flex;
   justify-content: center;
@@ -61,7 +68,7 @@ footer a {
   box-shadow: 5px 5px 14px rgb(203, 204, 207);
 }
 .presentation__texte {
-  color: rgb(112, 109, 109);
+  color: rgb(75, 73, 73);
 }
 
 main h2 {
@@ -95,7 +102,7 @@ main h2 {
   padding-left: 20px;
   padding-right: 20px;
   font-size: x-large;
-  color: rgb(112, 109, 109);
+  color: rgb(75, 73, 73);
 }
 .fonctionnement__texte {
   font-weight: bold;
@@ -194,6 +201,11 @@ main {
   position: relative;
 }
 
+.plat__titre {
+  border-bottom: solid rgb(177, 243, 177);
+  padding-bottom: 10px;
+  margin-right: 80%;
+}
 .plat__intitule {
   border: solid 0px;
   box-shadow: 5px 5px 14px rgb(203, 204, 207);
@@ -202,9 +214,14 @@ main {
   border-radius: 20px;
   background-color: white;
 }
+.plat__intitule__titre {
+  padding-top: 10px;
+}
 .plat__intitule__prix {
   display: flex;
   justify-content: space-between;
+  margin-top: -30px;
+  margin-right: 20px;
 }
 
 .btn {

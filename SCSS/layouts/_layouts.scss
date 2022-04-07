@@ -1,3 +1,22 @@
+/* Header */
+.titre {
+    width: 200px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.titremenu__arrow {
+    margin-left: 20px;
+}
+
+/*Footer*/
 .footer {
     background-color: $color-noirclair;
     color: white;
