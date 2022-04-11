@@ -1,5 +1,10 @@
 body {
   margin: auto;
+  font-family: "Roboto", "Times New Roman", Times, serif;
+}
+
+h1 h2 h3 {
+  font-family: "Shrikhand", "Times New Roman", Times, serif;
 }
 
 a {
@@ -10,6 +15,13 @@ footer a {
   color: white;
 }
 
+@media all and (min-width: 992px) {
+  body {
+    max-width: 1500px;
+    margin: auto !important;
+    /*Permet de prendre en compte margin auto au lieu du margin 0 dans normalize*/
+  }
+}
 /* Header */
 .titre {
   width: 200px;
@@ -43,6 +55,17 @@ footer a {
   margin-right: 10px;
 }
 
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__bloc {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
 /* Accueil */
 .rechercheville {
   display: flex;
@@ -71,10 +94,13 @@ footer a {
   color: rgb(75, 73, 73);
 }
 
-main h2 {
-  margin-left: 20px;
+@media all and (min-width: 768px) {
+  .presentation__explorer {
+    width: 30%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
 }
-
 #fonctionnement {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -89,6 +115,7 @@ main h2 {
   background-color: rgb(241, 243, 245);
   align-items: center;
   box-shadow: 5px 5px 14px rgb(241, 243, 245);
+  transition: background-color 1000ms linear;
 }
 .fonctionnement__numero {
   border: solid 1px;
@@ -108,16 +135,44 @@ main h2 {
   font-weight: bold;
   font-size: large;
 }
-.fonctionnement--pink {
+
+.fonctionnement:hover {
   background-color: #e8d9f9;
 }
-.fonctionnement--pinklogo {
+.fonctionnement:hover .fonctionnement__logo {
   color: #9356DC;
 }
 
-.restaurant {
+@media all and (min-width: 768px) and (max-width: 991px) {
+  #fonctionnement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fonctionnement {
+    width: 35%;
+  }
+}
+@media all and (min-width: 992px) {
+  #fonctionnement {
+    display: flex;
+    align-items: center;
+  }
+
+  .fonctionnement {
+    width: 20%;
+  }
+}
+.main--accueil {
   background-color: rgb(241, 243, 245);
-  padding-top: 40px;
+}
+
+.restaurant {
+  padding-bottom: 30px;
+}
+.restaurant__titre {
+  padding-top: 50px;
 }
 .restaurant__paris {
   border: solid 0px;
@@ -136,6 +191,9 @@ main h2 {
 .restaurant__paris__bloc__coeur {
   color: #9356DC;
   font-size: x-large;
+}
+.restaurant__paris__bloc__img {
+  width: 30px;
 }
 .restaurant__paris__img {
   display: flex;
@@ -162,6 +220,40 @@ main h2 {
   margin-bottom: -10px;
 }
 
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .restaurant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .restaurant__titre {
+    text-align: center;
+  }
+  .restaurant__paris__img {
+    width: 500px;
+  }
+  .restaurant__paris__img__image--texte {
+    left: auto;
+  }
+}
+@media all and (min-width: 992px) {
+  .restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .restaurant__titre {
+    margin-right: 70px;
+    text-align: center;
+  }
+  .restaurant__paris__img {
+    width: 500px;
+  }
+  .restaurant__paris__img__image--texte {
+    left: auto;
+    margin-top: 20px;
+  }
+}
 /* Menus */
 .titremenu {
   display: flex;
@@ -193,7 +285,7 @@ main h2 {
   justify-content: space-around;
 }
 
-main {
+.main--menu {
   background-color: rgb(241, 243, 245);
   border-radius: 50px 50px 0px 0px;
   margin-top: -40px;
@@ -232,6 +324,60 @@ main {
   border-radius: 40px;
   padding: 20px;
   margin: 40px 80px 20px 80px;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .plat {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+  }
+
+  .plat__intitule {
+    max-width: 600px;
+  }
+
+  .btn {
+    width: 30%;
+    margin: auto;
+  }
+
+  .titreresto {
+    justify-content: center;
+  }
+  .titreresto h1 {
+    padding-right: 50px;
+  }
+}
+@media all and (min-width: 992px) {
+  .imagemenu__photo {
+    max-width: 1500px;
+  }
+
+  .plat__liste {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .plat__intitule {
+    width: 600px;
+  }
+
+  .btn {
+    width: 30%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .titreresto {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  }
+  .titreresto h1 {
+    padding-right: 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

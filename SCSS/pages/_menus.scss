@@ -16,7 +16,6 @@
 .imagemenu {
     display: flex;
     height: 300px;
-    
     &__photo {
         object-fit: cover;
         width: 100%;
@@ -31,7 +30,7 @@
     justify-content: space-around;
 }
 
-main {
+.main--menu {
     background-color: $color-grisclair;
     border-radius: 50px 50px 0px 0px;
     margin-top: -40px;
@@ -64,8 +63,6 @@ main {
     }
 }
 
-
-
 .btn {
     text-align: center;
     border: solid 1px;
@@ -74,4 +71,54 @@ main {
     border-radius: 40px;
     padding: 20px;
     margin: 40px 80px 20px 80px;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px)
+{
+    .plat {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+    }
+    .plat__intitule {
+        max-width: 600px;
+    }
+    .btn {
+        width: 30%;
+        margin: auto;
+    }
+    .titreresto {
+        justify-content: center;
+        h1 {
+            padding-right: 50px;
+        }
+    }
+}
+
+@media all and (min-width: 992px)
+{
+    .imagemenu__photo {
+        max-width: 1500px;
+    }
+    .plat__liste {
+        display: flex;
+        justify-content: space-around;
+    }
+    .plat__intitule {
+        width: 600px;
+    }
+    .btn {
+        width: 30%;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .titreresto {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        h1 {
+            padding-right: 50px;
+        }
+    }
 }

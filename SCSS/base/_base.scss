@@ -1,5 +1,10 @@
 body {
     margin: auto;
+    font-family: "Roboto",'Times New Roman', Times, serif;
+}
+
+h1 h2 h3 {
+    font-family: "Shrikhand",'Times New Roman', Times, serif;
 }
 
 a {
@@ -8,4 +13,12 @@ a {
 
 footer a {
     color: white;
+}
+
+@media all and (min-width: 992px)
+{
+    body {
+        max-width: 1500px;
+        margin: auto !important; /*Permet de prendre en compte margin auto au lieu du margin 0 dans normalize*/
+    }
 }

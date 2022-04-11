@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="CSS/style.css" />
+        
         <link rel="stylesheet" href="CSS/normalize.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
@@ -10,6 +10,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/style.css" />
         <title>ohmyfood</title>
     </head>
 
@@ -43,14 +45,16 @@
                     <p class="fonctionnement__logo"><i class="fas fa-list"></i></p>
                     <p class="fonctionnement__texte">Composez votre menu</p>
                 </div>
-                <div class="fonctionnement fonctionnement--pink">
+                <div class="fonctionnement">
                     <p class="fonctionnement__numero">3</p>
-                    <p class="fonctionnement__logo fonctionnement--pinklogo"><i class="fas fa-store"></i></p>
-                    <p class="fonctionnement__texte fonctionnement--pink">Dégustez au restaurant</p>
+                    <p class="fonctionnement__logo"><i class="fas fa-store"></i></p>
+                    <p class="fonctionnement__texte">Dégustez au restaurant</p>
                 </div>
             </section>
+        </main> 
+        <main class="main--accueil">
+            <h2 class="restaurant__titre">Restaurants</h2>
             <section class="restaurant">
-                <h2 class="restaurant__titre">Restaurants</h2>
                 <article class="restaurant__paris">
                     <a href="HTML/menulapalettedugout.html">
                         <div class="restaurant__paris__img">
@@ -63,7 +67,7 @@
                                 <p class="cardtexteP">Ménilmontant</p>
                             </div>
                             <button class="restaurant__paris__bloc__coeur"><i class="fas fa-heart"></i></button>
-                            <p><i class="fas fa-heart-broken"></i></p>
+                            <img src="images/coeur_border.png" alt="coeur vide" class="restaurant__paris__bloc__img">
                         </div>
                     </a>    
                 </article>
