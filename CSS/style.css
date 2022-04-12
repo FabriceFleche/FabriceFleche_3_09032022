@@ -89,9 +89,15 @@ footer a {
   padding: 20px;
   margin: 40px;
   box-shadow: 5px 5px 14px rgb(203, 204, 207);
+  transition: all 500ms linear;
 }
 .presentation__texte {
   color: rgb(75, 73, 73);
+}
+
+.presentation__explorer:hover {
+  filter: brightness(1.2);
+  box-shadow: 10px 10px 20px black;
 }
 
 @media all and (min-width: 768px) {
