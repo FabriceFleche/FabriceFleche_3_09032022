@@ -9,6 +9,7 @@ h1 h2 h3 {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 footer a {
@@ -66,6 +67,52 @@ footer a {
     margin-bottom: 0;
   }
 }
+/*page loader*/
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+}
+@keyframes tourne {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  width: 100%;
+  height: 100%;
+  font-family: Shrikhand, sans-serif;
+  font-size: 100px;
+  text-align: center;
+  color: white;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  animation: loader 1s ease-in-out 3s forwards;
+}
+.loader__icone {
+  margin-top: 50%;
+  animation: tourne 5s;
+}
+.loader__texte {
+  margin-top: 25%;
+}
+
 /* Accueil */
 .rechercheville {
   display: flex;
@@ -261,6 +308,54 @@ footer a {
   }
 }
 /* Menus */
+/*Apparition des menus*/
+.plat__liste {
+  opacity: 0;
+}
+
+@keyframes menus {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  25% {
+    opacity: 0.25;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(20px);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.platlisteun {
+  animation: menus;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.platlistedeux {
+  animation: menus;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.platlistetrois {
+  animation: menus;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+/*code sass page*/
 .titremenu {
   display: flex;
   align-items: center;
@@ -330,6 +425,13 @@ footer a {
   border-radius: 40px;
   padding: 20px;
   margin: 40px 80px 20px 80px;
+  box-shadow: 5px 5px 14px rgb(203, 204, 207);
+  transition: all 500ms linear;
+}
+
+.btn:hover {
+  filter: brightness(1.2);
+  box-shadow: 10px 10px 20px black;
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -385,5 +487,162 @@ footer a {
     padding-right: 50px;
   }
 }
+@keyframes color {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.bloc2coeur {
+  background-color: white;
+  animation-fill-mode: forwards;
+}
+.bloc2coeur--blanc {
+  position: absolute;
+  z-index: 1;
+}
+.bloc2coeur--blanc:active + .bloc2coeur--violet {
+  animation: color;
+  animation-duration: 2s;
+}
+.bloc2coeur--violet {
+  font-size: 22px;
+  opacity: 0;
+  color: #9356DC;
+  position: relative;
+  top: 0px;
+  left: 91px;
+  z-index: 0;
+}
+
+/*production*/
+.bloc2coeurb {
+  background-color: white;
+}
+.bloc2coeurb--blanc {
+  position: absolute;
+  z-index: 1;
+}
+.bloc2coeurb--blanc:active + .bloc2coeurb--violet {
+  color: #9356DC;
+  z-index: 2;
+}
+.bloc2coeurb--violet {
+  font-size: 22px;
+  color: white;
+  transition: all 1s ease-in;
+  position: relative;
+  top: 0px;
+  left: 1px;
+}
+
+/*.stop:not(:hover) {
+    color: $color-primary;
+    z-index: 2;
+    animation-play-state: paused;
+}*/
+/*
+test page loader
+
+@keyframes loader {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(2000px);
+    }
+}
+
+@keyframes tourne {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+
+.loader {
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    width: 100%;
+    height: 100%;
+    font-family: Shrikhand, sans-serif;
+    font-size: 100px;
+    text-align: center;
+    color: $color-blanc;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    animation: loader 1s ease-in-out 3s forwards;
+    &__icone {
+        animation: tourne 5s;
+    }
+  }
+*/
+/*Apparition des menus*/
+/*
+.plat__liste {
+    opacity: 0;
+}
+
+@keyframes menus {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    25% {
+        opacity: 0.25;
+        transform: translateY(30px);
+    }
+
+    50% {
+        opacity: 0.50;
+        transform: translateY(20px);
+    }
+
+    75% {
+        opacity: 0.75;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.platlisteun {
+    animation: menus;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.platlistedeux {
+    animation: menus;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+
+.platlistetrois {
+    animation: menus;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+*/
 
 /*# sourceMappingURL=style.css.map */

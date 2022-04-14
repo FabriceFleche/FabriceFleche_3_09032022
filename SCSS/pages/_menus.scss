@@ -1,5 +1,61 @@
 /* Menus */
 
+/*Apparition des menus*/
+
+.plat__liste {
+    opacity: 0;
+}
+
+@keyframes menus {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    25% {
+        opacity: 0.25;
+        transform: translateY(30px);
+    }
+
+    50% {
+        opacity: 0.50;
+        transform: translateY(20px);
+    }
+
+    75% {
+        opacity: 0.75;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.platlisteun {
+    animation: menus;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.platlistedeux {
+    animation: menus;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+
+.platlistetrois {
+    animation: menus;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/*code sass page*/
+
 .titremenu {
     display: flex;
     align-items: center;
@@ -71,6 +127,13 @@
     border-radius: 40px;
     padding: 20px;
     margin: 40px 80px 20px 80px;
+    box-shadow: 5px 5px 14px $color-grisfonce;
+    transition: all 500ms linear;
+}
+
+.btn:hover {
+    filter: brightness(1.20);
+    box-shadow: 10px 10px 20px $color-noir;
 }
 
 @media all and (min-width: 768px) and (max-width: 991px)

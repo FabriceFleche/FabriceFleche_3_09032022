@@ -39,7 +39,11 @@
     left: 0;
     animation: loader 1s ease-in-out 3s forwards;
     &__icone {
+        margin-top: 50%;
         animation: tourne 5s;
+    }
+    &__texte {
+        margin-top: 25%;
     }
   }
 
