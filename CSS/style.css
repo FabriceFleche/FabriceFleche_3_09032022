@@ -19,8 +19,7 @@ footer a {
 @media all and (min-width: 992px) {
   body {
     max-width: 1500px;
-    margin: auto !important;
-    /*Permet de prendre en compte margin auto au lieu du margin 0 dans normalize*/
+    margin: auto;
   }
 }
 /* Header */
@@ -72,9 +71,6 @@ footer a {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 0.5;
-  }
   100% {
     opacity: 0;
     transform: translateX(2000px);
@@ -84,17 +80,14 @@ footer a {
   0% {
     transform: rotate(0deg);
   }
-  50% {
-    transform: rotate(360deg);
-  }
   100% {
     transform: rotate(360deg);
   }
 }
 .loader {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   font-family: Shrikhand, sans-serif;
   font-size: 100px;
   text-align: center;
@@ -106,11 +99,12 @@ footer a {
   animation: loader 1s ease-in-out 3s forwards;
 }
 .loader__icone {
-  margin-top: 50%;
-  animation: tourne 5s;
+  margin-top: 100px;
+  animation: tourne 3s;
 }
 .loader__texte {
-  margin-top: 25%;
+  margin-top: 80px;
+  font-size: 50%;
 }
 
 /* Accueil */
@@ -143,8 +137,8 @@ footer a {
 }
 
 .presentation__explorer:hover {
-  filter: brightness(1.2);
-  box-shadow: 10px 10px 20px black;
+  filter: brightness(1.1);
+  box-shadow: 5px 5px 14px rgb(75, 73, 73);
 }
 
 @media all and (min-width: 768px) {
@@ -168,7 +162,7 @@ footer a {
   background-color: rgb(241, 243, 245);
   align-items: center;
   box-shadow: 5px 5px 14px rgb(241, 243, 245);
-  transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear, color 1000ms linear;
 }
 .fonctionnement__numero {
   border: solid 1px;
@@ -217,7 +211,7 @@ footer a {
     width: 20%;
   }
 }
-.main--accueil {
+.partie--accueil {
   background-color: rgb(241, 243, 245);
 }
 
@@ -497,24 +491,31 @@ footer a {
 }
 .bloc2coeur {
   background-color: white;
-  animation-fill-mode: forwards;
 }
 .bloc2coeur--blanc {
   position: absolute;
   z-index: 1;
 }
-.bloc2coeur--blanc:active + .bloc2coeur--violet {
+.bloc2coeur--blanc:hover + .bloc2coeur--violet {
   animation: color;
   animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 .bloc2coeur--violet {
   font-size: 22px;
   opacity: 0;
-  color: #9356DC;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   position: relative;
   top: 0px;
-  left: 91px;
+  left: 1px;
   z-index: 0;
+}
+
+.bloc2coeur--blanc:hover {
+  opacity: 0;
 }
 
 /*production*/

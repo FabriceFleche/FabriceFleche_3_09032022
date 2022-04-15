@@ -10,27 +10,34 @@
 
 .bloc2coeur {
     background-color: white;
-    animation-fill-mode: forwards;  
+     
     &--blanc {
         position: absolute;
         z-index: 1;
-        &:active +.bloc2coeur--violet {
+        &:hover +.bloc2coeur--violet {
             animation: color;
             animation-duration: 2s;
-            
+            animation-fill-mode: forwards;
         }
     }
     &--violet {
         font-size: 22px;
         opacity: 0;
-        color: $color-primary;
+        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
         position: relative;
         top: 0px;
-        left: 91px;
+        left: 1px;
         z-index: 0;
     }
 }
 
+.bloc2coeur--blanc:hover {
+    opacity: 0;
+    
+}
 
 /*production*/
 
