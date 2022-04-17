@@ -110,9 +110,6 @@
         padding-left: 10px;
         border-radius: 20px;
         background-color: $color-blanc;
-        &__titre {
-            padding-top: 10px;
-        }
         &__prix {
             display: flex;
             justify-content: space-between;
@@ -122,9 +119,15 @@
         &--bloctexte {
             display: flex;
             flex-direction: column;
+            width: 100%;
         }
         &:hover .check {
-            width: 4rem;
+            width: 6rem;
+            rotate: 360deg;
+            &__icone {
+                font-size: medium;
+                
+            }
         }
     }
 }
@@ -137,14 +140,16 @@
     border-radius: 0% 20% 20% 0%;
     width: 0px;
     height: 6rem;
+    transition-duration: 0.5s;
     &__icone {
+        transition-duration: 1s;
         color: $color-tertiary;
         background-color: $color-blanc;
         border-radius: 50%;
         width: 20px;
         height: 20px;
         text-align: center;
-        
+        font-size: 0px;
     }
 }    
 

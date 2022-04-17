@@ -404,9 +404,6 @@ footer a {
   border-radius: 20px;
   background-color: white;
 }
-.plat__intitule__titre {
-  padding-top: 10px;
-}
 .plat__intitule__prix {
   display: flex;
   justify-content: space-between;
@@ -416,9 +413,14 @@ footer a {
 .plat__intitule--bloctexte {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .plat__intitule:hover .check {
-  width: 4rem;
+  width: 6rem;
+  rotate: 360deg;
+}
+.plat__intitule:hover .check__icone {
+  font-size: medium;
 }
 
 .check {
@@ -429,14 +431,17 @@ footer a {
   border-radius: 0% 20% 20% 0%;
   width: 0px;
   height: 6rem;
+  transition-duration: 0.5s;
 }
 .check__icone {
+  transition-duration: 1s;
   color: #99E2D0;
   background-color: white;
   border-radius: 50%;
   width: 20px;
   height: 20px;
   text-align: center;
+  font-size: 0px;
 }
 
 .btn {
