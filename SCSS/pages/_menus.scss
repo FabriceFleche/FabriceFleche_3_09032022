@@ -101,6 +101,9 @@
         margin-right: 80%;
     }
     &__intitule {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         border: solid 0px;
         box-shadow: 5px 5px 14px $color-grisfonce;
         margin: 20px;
@@ -116,8 +119,34 @@
             margin-top: -30px;
             margin-right: 20px;
         }
+        &--bloctexte {
+            display: flex;
+            flex-direction: column;
+        }
+        &:hover .check {
+            width: 4rem;
+        }
     }
 }
+
+.check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-tertiary;
+    border-radius: 0% 20% 20% 0%;
+    width: 0px;
+    height: 6rem;
+    &__icone {
+        color: $color-tertiary;
+        background-color: $color-blanc;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        
+    }
+}    
 
 .btn {
     text-align: center;
