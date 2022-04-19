@@ -263,6 +263,55 @@ footer a {
   margin-top: 10px;
 }
 
+@keyframes color {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes colorblack {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.bloc2coeur {
+  background-color: white;
+}
+.bloc2coeur--blanc {
+  position: absolute;
+  z-index: 1;
+}
+.bloc2coeur--blanc:hover + .bloc2coeur--violet {
+  animation: color;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.bloc2coeur--blanc:hover {
+  animation: colorblack;
+  animation-duration: 1s;
+}
+.bloc2coeur--violet {
+  font-size: 21px;
+  opacity: 0;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  top: 0px;
+  left: 1px;
+  z-index: 0;
+}
+
+.bloc2coeur--blanc:hover {
+  opacity: 0;
+}
+
 .cardtexteH {
   margin-bottom: -10px;
 }
@@ -388,6 +437,14 @@ footer a {
   position: relative;
 }
 
+@keyframes coche {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .plat__titre {
   border-bottom: solid rgb(177, 243, 177);
   padding-bottom: 10px;
@@ -404,11 +461,18 @@ footer a {
   border-radius: 20px;
   background-color: white;
 }
+.plat__intitule__titre {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .plat__intitule__prix {
   display: flex;
   justify-content: space-between;
   margin-top: -30px;
   margin-right: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .plat__intitule--bloctexte {
   display: flex;
@@ -417,10 +481,10 @@ footer a {
 }
 .plat__intitule:hover .check {
   width: 6rem;
-  rotate: 360deg;
 }
 .plat__intitule:hover .check__icone {
   font-size: medium;
+  animation: coche 1s;
 }
 
 .check {
@@ -429,12 +493,12 @@ footer a {
   justify-content: center;
   background-color: #99E2D0;
   border-radius: 0% 20% 20% 0%;
-  width: 0px;
+  width: 0rem;
   height: 6rem;
-  transition-duration: 0.5s;
+  transition-duration: 1s;
 }
 .check__icone {
-  transition-duration: 1s;
+  transform-origin: center;
   color: #99E2D0;
   background-color: white;
   border-radius: 50%;
@@ -514,64 +578,80 @@ footer a {
     padding-right: 50px;
   }
 }
-@keyframes color {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/*@keyframes color {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
+
+@keyframes colorblack {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
 .bloc2coeur {
-  background-color: white;
-}
-.bloc2coeur--blanc {
-  position: absolute;
-  z-index: 1;
-}
-.bloc2coeur--blanc:hover + .bloc2coeur--violet {
-  animation: color;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-.bloc2coeur--violet {
-  font-size: 22px;
-  opacity: 0;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  position: relative;
-  top: 0px;
-  left: 1px;
-  z-index: 0;
+    background-color: white;
+
+    &--blanc {
+        position: absolute;
+        z-index: 1;
+        &:hover +.bloc2coeur--violet {
+            animation: color;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+        &:hover {
+            animation: colorblack;
+            animation-duration: 2s;
+        }
+    }
+    &--violet {
+        font-size: 21px;
+        opacity: 0;
+        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        position: relative;
+        top: 0px;
+        left: 1px;
+        z-index: 0;
+    }
 }
 
 .bloc2coeur--blanc:hover {
-  opacity: 0;
-}
+    opacity: 0;
 
-/*production*/
-.bloc2coeurb {
-  background-color: white;
-}
-.bloc2coeurb--blanc {
-  position: absolute;
-  z-index: 1;
-}
-.bloc2coeurb--blanc:active + .bloc2coeurb--violet {
-  color: #9356DC;
-  z-index: 2;
-}
-.bloc2coeurb--violet {
-  font-size: 22px;
-  color: white;
-  transition: all 1s ease-in;
-  position: relative;
-  top: 0px;
-  left: 1px;
-}
-
+}*/
+/*ancienne gestion coeur*/
+/*.bloc2coeurb {
+    background-color: $color-blanc; 
+    &--blanc {
+        position: absolute;
+        z-index: 1;
+        &:active +.bloc2coeurb--violet {
+            color: $color-primary;
+            z-index: 2;
+        }
+    }
+    &--violet {
+        font-size: 22px;
+        color: $color-blanc;
+        transition: all 1s ease-in;
+        position: relative;
+        top: 0px;
+        left: 1px;
+    }
+}*/
 /*.stop:not(:hover) {
     color: $color-primary;
     z-index: 2;

@@ -1,10 +1,20 @@
-@keyframes color {
+/*@keyframes color {
     from {
         opacity: 0;
     }
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes colorblack {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
 
@@ -19,9 +29,13 @@
             animation-duration: 2s;
             animation-fill-mode: forwards;
         }
+        &:hover {
+            animation: colorblack;
+            animation-duration: 2s;
+        }
     }
     &--violet {
-        font-size: 22px;
+        font-size: 21px;
         opacity: 0;
         background: linear-gradient(to bottom right, $color-secondary, $color-primary);
         background-clip: text;
@@ -37,11 +51,11 @@
 .bloc2coeur--blanc:hover {
     opacity: 0;
     
-}
+}*/
 
-/*production*/
+/*ancienne gestion coeur*/
 
-.bloc2coeurb {
+/*.bloc2coeurb {
     background-color: $color-blanc; 
     &--blanc {
         position: absolute;
@@ -59,7 +73,7 @@
         top: 0px;
         left: 1px;
     }
-}
+}*/
 
 /*.stop:not(:hover) {
     color: $color-primary;

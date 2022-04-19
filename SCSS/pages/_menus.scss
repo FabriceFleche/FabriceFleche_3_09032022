@@ -94,6 +94,16 @@
     position: relative;
 }
 
+@keyframes coche {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
 .plat {
     &__titre{
         border-bottom: solid $color-vertclair;
@@ -110,11 +120,18 @@
         padding-left: 10px;
         border-radius: 20px;
         background-color: $color-blanc;
+        &__titre {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
         &__prix {
             display: flex;
             justify-content: space-between;
             margin-top: -30px;
             margin-right: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         &--bloctexte {
             display: flex;
@@ -123,10 +140,9 @@
         }
         &:hover .check {
             width: 6rem;
-            rotate: 360deg;
             &__icone {
                 font-size: medium;
-                
+                animation: coche 1s;
             }
         }
     }
@@ -138,11 +154,11 @@
     justify-content: center;
     background-color: $color-tertiary;
     border-radius: 0% 20% 20% 0%;
-    width: 0px;
+    width: 0rem;
     height: 6rem;
-    transition-duration: 0.5s;
+    transition-duration: 1s;
     &__icone {
-        transition-duration: 1s;
+        transform-origin: center;
         color: $color-tertiary;
         background-color: $color-blanc;
         border-radius: 50%;
