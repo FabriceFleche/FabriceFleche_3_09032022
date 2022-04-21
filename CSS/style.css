@@ -48,11 +48,16 @@ footer a {
 }
 .footer__bloc {
   display: flex;
+  align-items: center;
   margin-top: -15px;
   margin-bottom: -15px;
 }
 .footer__bloc__icone {
   margin-right: 10px;
+}
+.footer__bloc__icone--hands {
+  font-size: small;
+  margin-right: 7px;
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -286,12 +291,12 @@ footer a {
   position: absolute;
   z-index: 1;
 }
-.bloc2coeur--blanc:hover + .bloc2coeur--violet {
+.bloc2coeur--blanc:active + .bloc2coeur--violet {
   animation: color;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-.bloc2coeur--blanc:hover {
+.bloc2coeur--blanc:active {
   animation: colorblack;
   animation-duration: 1s;
 }
@@ -308,7 +313,7 @@ footer a {
   z-index: 0;
 }
 
-.bloc2coeur--blanc:hover {
+.bloc2coeur--blanc:active {
   opacity: 0;
 }
 
@@ -426,7 +431,9 @@ footer a {
 .titreresto {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 3rem;
 }
 
 .main--menu {
@@ -443,6 +450,14 @@ footer a {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes transfert {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-50px);
   }
 }
 .plat__titre {
@@ -470,21 +485,31 @@ footer a {
   display: flex;
   justify-content: space-between;
   margin-top: -30px;
-  margin-right: 20px;
+}
+.plat__intitule__prix__texte {
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.plat__intitule__prix__tarif {
+  margin-right: 10px;
 }
 .plat__intitule--bloctexte {
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-width: 0%;
 }
-.plat__intitule:hover .check {
-  width: 6rem;
+.plat__intitule:active .check {
+  width: 80px;
 }
-.plat__intitule:hover .check__icone {
+.plat__intitule:active .check__icone {
   font-size: medium;
   animation: coche 1s;
+}
+.plat__intitule:active .check__tarif {
+  animation: transfert 1s;
+  animation-fill-mode: forwards;
 }
 
 .check {
@@ -493,7 +518,7 @@ footer a {
   justify-content: center;
   background-color: #99E2D0;
   border-radius: 0% 20% 20% 0%;
-  width: 0rem;
+  width: 0px;
   height: 6rem;
   transition-duration: 1s;
 }
@@ -506,6 +531,10 @@ footer a {
   height: 20px;
   text-align: center;
   font-size: 0px;
+}
+.check__tarif {
+  margin-top: 3rem;
+  margin-right: 3rem;
 }
 
 .btn {
@@ -522,7 +551,7 @@ footer a {
 
 .btn:hover {
   filter: brightness(1.2);
-  box-shadow: 10px 10px 20px black;
+  box-shadow: 10px 10px 20px rgb(75, 73, 73);
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -757,6 +786,85 @@ test page loader
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
+*/
+/*gestion coche dans menu */
+/*
+@keyframes coche {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+.plat {
+    &__titre{
+        border-bottom: solid $color-vertclair;
+        padding-bottom: 10px;
+        margin-right: 80%;
+    }
+    &__intitule {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: solid 0px;
+        box-shadow: 5px 5px 14px $color-grisfonce;
+        margin: 20px;
+        padding-left: 10px;
+        border-radius: 20px;
+        background-color: $color-blanc;
+        &__titre {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &__prix {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -30px;
+            &__texte {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        &--bloctexte {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+        &:hover .check {
+            width: 150px;
+            &__icone {
+                font-size: medium;
+                animation: coche 1s;
+            }
+        }
+    }
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-tertiary;
+    border-radius: 0% 20% 20% 0%;
+    width: 0px;
+    height: 6rem;
+    transition-duration: 1s;
+    &__icone {
+        transform-origin: center;
+        color: $color-tertiary;
+        background-color: $color-blanc;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        font-size: 0px;
+    }
+}    
 */
 
 /*# sourceMappingURL=style.css.map */

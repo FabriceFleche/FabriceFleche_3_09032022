@@ -230,12 +230,12 @@
     &--blanc {
         position: absolute;
         z-index: 1;
-        &:hover +.bloc2coeur--violet {
+        &:active +.bloc2coeur--violet {
             animation: color;
             animation-duration: 1s;
             animation-fill-mode: forwards;
         }
-        &:hover {
+        &:active {
             animation: colorblack;
             animation-duration: 1s;
         }
@@ -254,7 +254,7 @@
     }
 }
 
-.bloc2coeur--blanc:hover {
+.bloc2coeur--blanc:active {
     opacity: 0;
 }
 

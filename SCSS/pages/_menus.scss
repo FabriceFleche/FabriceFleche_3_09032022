@@ -83,7 +83,9 @@
 .titreresto {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-right: 3rem;
 }
 
 .main--menu {
@@ -101,6 +103,16 @@
 
     100% {
         transform:rotate(360deg);
+    }
+}
+
+@keyframes transfert {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-50px);
     }
 }
 
@@ -129,20 +141,30 @@
             display: flex;
             justify-content: space-between;
             margin-top: -30px;
-            margin-right: 20px;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            &__texte {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            &__tarif {
+                margin-right: 10px;
+            }
         }
         &--bloctexte {
             display: flex;
             flex-direction: column;
             width: 100%;
+            min-width: 0%;
         }
-        &:hover .check {
-            width: 6rem;
+        &:active .check {
+            width: 80px;
             &__icone {
                 font-size: medium;
                 animation: coche 1s;
+            }
+            &__tarif {
+                animation: transfert 1s;
+                animation-fill-mode: forwards;
             }
         }
     }
@@ -154,7 +176,7 @@
     justify-content: center;
     background-color: $color-tertiary;
     border-radius: 0% 20% 20% 0%;
-    width: 0rem;
+    width: 0px;
     height: 6rem;
     transition-duration: 1s;
     &__icone {
@@ -167,7 +189,11 @@
         text-align: center;
         font-size: 0px;
     }
-}    
+    &__tarif {
+        margin-top: 3rem;
+        margin-right: 3rem;
+    }
+}      
 
 .btn {
     text-align: center;
@@ -183,7 +209,7 @@
 
 .btn:hover {
     filter: brightness(1.20);
-    box-shadow: 10px 10px 20px $color-noir;
+    box-shadow: 10px 10px 20px $color-noirclair;
 }
 
 @media all and (min-width: 768px) and (max-width: 991px)
