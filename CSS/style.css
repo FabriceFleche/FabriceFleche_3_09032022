@@ -291,12 +291,12 @@ footer a {
   position: absolute;
   z-index: 1;
 }
-.bloc2coeur--blanc:active + .bloc2coeur--violet {
+.bloc2coeur--blanc:hover + .bloc2coeur--violet {
   animation: color;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-.bloc2coeur--blanc:active {
+.bloc2coeur--blanc:hover {
   animation: colorblack;
   animation-duration: 1s;
 }
@@ -313,7 +313,7 @@ footer a {
   z-index: 0;
 }
 
-.bloc2coeur--blanc:active {
+.bloc2coeur--blanc:hover {
   opacity: 0;
 }
 
@@ -444,99 +444,104 @@ footer a {
   position: relative;
 }
 
+/*
 @keyframes coche {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform:rotate(360deg);
+    }
 }
+
 @keyframes transfert {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(-50px);
-  }
+    0% {
+        transform: translate(50px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
 }
-.plat__titre {
-  border-bottom: solid rgb(177, 243, 177);
-  padding-bottom: 10px;
-  margin-right: 80%;
-}
-.plat__intitule {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: solid 0px;
-  box-shadow: 5px 5px 14px rgb(203, 204, 207);
-  margin: 20px;
-  padding-left: 10px;
-  border-radius: 20px;
-  background-color: white;
-}
-.plat__intitule__titre {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.plat__intitule__prix {
-  display: flex;
-  justify-content: space-between;
-  margin-top: -30px;
-}
-.plat__intitule__prix__texte {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.plat__intitule__prix__tarif {
-  margin-right: 10px;
-}
-.plat__intitule--bloctexte {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-width: 0%;
-}
-.plat__intitule:active .check {
-  width: 80px;
-}
-.plat__intitule:active .check__icone {
-  font-size: medium;
-  animation: coche 1s;
-}
-.plat__intitule:active .check__tarif {
-  animation: transfert 1s;
-  animation-fill-mode: forwards;
+
+.plat {
+    &__titre{
+        border-bottom: solid $color-vertclair;
+        padding-bottom: 10px;
+        margin-right: 80%;
+    }
+    &__intitule {
+
+        border: solid 0px;
+        box-shadow: 5px 5px 14px $color-grisfonce;
+        margin: 20px;
+        padding-left: 10px;
+        border-radius: 20px;
+        background-color: $color-blanc;
+        overflow: hidden;
+        &__titre {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &__prix {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -30px;
+            &__texte {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            &__tarif {
+                margin-right: 1px;
+            }
+        }
+        &--bloctexte {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            min-width: 0%;
+            position: absolute;
+        }
+        &:hover .check {
+            animation: transfert 1s;
+            animation-fill-mode: forwards;
+            &__icone {
+                animation: coche 1s;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
 }
 
 .check {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #99E2D0;
-  border-radius: 0% 20% 20% 0%;
-  width: 0px;
-  height: 6rem;
-  transition-duration: 1s;
-}
-.check__icone {
-  transform-origin: center;
-  color: #99E2D0;
-  background-color: white;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  font-size: 0px;
-}
-.check__tarif {
-  margin-top: 3rem;
-  margin-right: 3rem;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-tertiary;
+    border-radius: 0% 20% 20% 0%;
+    width: 100px;
+    height: 6rem;
+    transform: translateX(100px);
 
+    &__icone {
+        transform-origin: center;
+        color: $color-tertiary;
+        background-color: $color-blanc;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        font-size: medium;
+    }
+    &__tarif {
+        margin-top: 3rem;
+        margin-right: 3rem;
+    }
+}      
+*/
 .btn {
   text-align: center;
   border: solid 1px;
@@ -667,7 +672,7 @@ footer a {
     &--blanc {
         position: absolute;
         z-index: 1;
-        &:active +.bloc2coeurb--violet {
+        &:hover +.bloc2coeurb--violet {
             color: $color-primary;
             z-index: 2;
         }
@@ -866,5 +871,94 @@ test page loader
     }
 }    
 */
+/* Version des coches menus qui fonctionne 210422*/
+@keyframes coche {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes transfert {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+.plat__titre {
+  border-bottom: solid rgb(177, 243, 177);
+  padding-bottom: 10px;
+  margin-right: 80%;
+}
+.plat__intitule {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: solid 0px;
+  box-shadow: 5px 5px 14px rgb(203, 204, 207);
+  margin: 20px;
+  padding-left: 10px;
+  border-radius: 20px;
+  background-color: white;
+}
+.plat__intitule__titre {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.plat__intitule__prix {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -30px;
+}
+.plat__intitule__prix__texte {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.plat__intitule__prix__tarif {
+  margin-right: 10px;
+}
+.plat__intitule--bloctexte {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0%;
+}
+.plat__intitule:hover .check {
+  width: 80px;
+}
+.plat__intitule:hover .check__icone {
+  opacity: 1;
+  font-size: medium;
+  animation: coche 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  border-radius: 0% 20% 20% 0%;
+  width: 0px;
+  height: 6rem;
+  transition-duration: 0.5s;
+}
+.check__icone {
+  transform-origin: center;
+  color: #99E2D0;
+  background-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: medium;
+  opacity: 0;
+  transition-duration: 0.5s;
+}
 
 /*# sourceMappingURL=style.css.map */
