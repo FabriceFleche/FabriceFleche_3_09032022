@@ -95,24 +95,24 @@
     padding-bottom: 30px;
     position: relative;
 }
-/*
+
 @keyframes coche {
     0% {
         transform: rotate(0deg);
     }
 
     100% {
-        transform:rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
 @keyframes transfert {
     0% {
-        transform: translate(50px);
+        transform: translateX(0px);
     }
 
     100% {
-        transform: translate(0px);
+        transform: translateX(-50px);
     }
 }
 
@@ -123,14 +123,15 @@
         margin-right: 80%;
     }
     &__intitule {
-        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         border: solid 0px;
         box-shadow: 5px 5px 14px $color-grisfonce;
         margin: 20px;
         padding-left: 10px;
         border-radius: 20px;
         background-color: $color-blanc;
-        overflow: hidden;
         &__titre {
             white-space: nowrap;
             overflow: hidden;
@@ -146,21 +147,21 @@
                 text-overflow: ellipsis;
             }
             &__tarif {
-                margin-right: 1px;
+                margin-right: 10px;
             }
         }
         &--bloctexte {
             display: flex;
             flex-direction: column;
-            overflow: hidden;
+            width: 100%;
             min-width: 0%;
-            position: absolute;
         }
         &:hover .check {
-            animation: transfert 1s;
-            animation-fill-mode: forwards;
+            width: 80px;
             &__icone {
-                animation: coche 1s;
+                opacity: 1;
+                font-size: medium;
+                animation: coche 0.5s ease-in-out;
                 animation-fill-mode: forwards;
             }
         }
@@ -173,10 +174,9 @@
     justify-content: center;
     background-color: $color-tertiary;
     border-radius: 0% 20% 20% 0%;
-    width: 100px;
+    width: 0px;
     height: 6rem;
-    transform: translateX(100px);
-    
+    transition: width 0.5s;
     &__icone {
         transform-origin: center;
         color: $color-tertiary;
@@ -186,13 +186,11 @@
         height: 20px;
         text-align: center;
         font-size: medium;
-    }
-    &__tarif {
-        margin-top: 3rem;
-        margin-right: 3rem;
+        opacity: 0;
+        transition: opacity 0.5s;
     }
 }      
-*/
+
 .btn {
     text-align: center;
     border: solid 1px;
@@ -219,6 +217,7 @@
     }
     .plat__intitule {
         max-width: 600px;
+        min-width: 0%;
     }
     .btn {
         width: 30%;
@@ -243,6 +242,7 @@
     }
     .plat__intitule {
         width: 600px;
+        min-width: 0%;
     }
     .btn {
         width: 30%;

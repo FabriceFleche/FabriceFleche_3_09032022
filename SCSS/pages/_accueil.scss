@@ -101,7 +101,7 @@
     background-color: $color-grisclair;
     align-items: center;
     box-shadow: 5px 5px 14px $color-grisclair;
-    transition: background-color 1000ms linear, color 1000ms linear;
+    transition: background-color 0.5s linear;
     &__numero {
         border: solid 1px;
         border-radius: 50%;
@@ -115,6 +115,7 @@
         padding-right: 20px;
         font-size: x-large;
         color: $color-noirclair;
+        transition: color 0.5s ease-in;
     }
     &__texte {
         font-weight: bold;
