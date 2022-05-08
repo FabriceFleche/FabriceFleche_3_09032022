@@ -106,16 +106,6 @@
     }
 }
 
-@keyframes transfert {
-    0% {
-        transform: translateX(0px);
-    }
-
-    100% {
-        transform: translateX(-50px);
-    }
-}
-
 .plat {
     &__titre{
         border-bottom: solid $color-vertclair;
