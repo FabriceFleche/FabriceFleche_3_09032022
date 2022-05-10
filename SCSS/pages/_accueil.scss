@@ -58,6 +58,10 @@
     background-color: $color-grisclair;
     text-align: center;
     padding: 30px;
+    &__titre {
+        font-weight: bold;
+        font-size: xx-large;
+    }
     &__explorer {
         border: solid 1px;
         background: linear-gradient(to bottom right, $color-secondary, $color-primary);
@@ -70,6 +74,7 @@
     }
     &__texte {
         color: $color-noirclair;
+        font-size: large;
     }
 }
 
@@ -86,6 +91,11 @@
         margin-bottom: 40px;
     }
 }    
+
+.titrefonctionnement {
+    margin-left: 5%;
+    font-weight: bold;
+}
 
 #fonctionnement {
     padding-top: 30px;
@@ -161,12 +171,14 @@
     padding-bottom: 30px;
     &__titre {
         padding-top: 50px;
+        margin-left: 5%;
     }
     &__paris {
         border: solid 0px;
         border-radius: 20px;
         margin: 20px;
         background-color: $color-blanc;
+        position: relative;
         &__bloc {
             color: $color-noir;
             display: flex;
@@ -190,15 +202,15 @@
                 width: 100%;
                 height: 200px;
                 border-radius: 20px 20px 0px 0px;
-                position: relative;
+                
                 &--texte {
                     position: absolute;
                     border: solid 1px;
                     background: $color-vertclair;
                     color: $color-vertfonce;
                     padding: 5px 10px;
-                    left: 70%;
-                    margin-top: 10px;
+                    top: 15px;
+                    right: 15px;
                 }
             }
         }  
@@ -274,9 +286,6 @@
         }
         &__paris__img {
             width: 500px;
-            &__image--texte {
-                left: auto;
-            }    
         }
     }
 }
@@ -293,10 +302,6 @@
         }
         &__paris__img {
             width: 500px;
-            &__image--texte {
-                left: auto;
-                margin-top: 20px;
-            }
         }    
     }
 }    

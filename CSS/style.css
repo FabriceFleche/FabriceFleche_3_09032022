@@ -3,10 +3,6 @@ body {
   font-family: "Roboto", "Times New Roman", Times, serif;
 }
 
-h1 h2 h3 {
-  font-family: "Shrikhand", "Times New Roman", Times, serif;
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -44,13 +40,18 @@ footer a {
 .footer {
   background-color: rgb(75, 73, 73);
   color: white;
-  padding: 20px 0px 20px 10px;
+  padding: 20px 0px 20px 30px;
+}
+.footer__titre {
+  font-family: "Shrikhand", "Times New Roman", Times, serif;
+  font-size: large;
+  margin-bottom: 25px;
 }
 .footer__bloc {
   display: flex;
   align-items: center;
-  margin-top: -15px;
-  margin-bottom: -15px;
+  margin-top: -20px;
+  margin-bottom: -20px;
 }
 .footer__bloc__icone {
   margin-right: 10px;
@@ -58,6 +59,10 @@ footer a {
 .footer__bloc__icone--hands {
   font-size: small;
   margin-right: 7px;
+}
+
+.footerpropose {
+  margin-left: 7px;
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -127,6 +132,10 @@ footer a {
   text-align: center;
   padding: 30px;
 }
+.presentation__titre {
+  font-weight: bold;
+  font-size: xx-large;
+}
 .presentation__explorer {
   border: solid 1px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -139,6 +148,7 @@ footer a {
 }
 .presentation__texte {
   color: rgb(75, 73, 73);
+  font-size: large;
 }
 
 .presentation__explorer:hover {
@@ -153,6 +163,11 @@ footer a {
     margin-bottom: 40px;
   }
 }
+.titrefonctionnement {
+  margin-left: 5%;
+  font-weight: bold;
+}
+
 #fonctionnement {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -226,12 +241,14 @@ footer a {
 }
 .restaurant__titre {
   padding-top: 50px;
+  margin-left: 5%;
 }
 .restaurant__paris {
   border: solid 0px;
   border-radius: 20px;
   margin: 20px;
   background-color: white;
+  position: relative;
 }
 .restaurant__paris__bloc {
   color: black;
@@ -257,7 +274,6 @@ footer a {
   width: 100%;
   height: 200px;
   border-radius: 20px 20px 0px 0px;
-  position: relative;
 }
 .restaurant__paris__img__image--texte {
   position: absolute;
@@ -265,8 +281,8 @@ footer a {
   background: rgb(177, 243, 177);
   color: green;
   padding: 5px 10px;
-  left: 70%;
-  margin-top: 10px;
+  top: 15px;
+  right: 15px;
 }
 
 @keyframes color {
@@ -334,9 +350,6 @@ footer a {
   .restaurant__paris__img {
     width: 500px;
   }
-  .restaurant__paris__img__image--texte {
-    left: auto;
-  }
 }
 @media all and (min-width: 992px) {
   .restaurant {
@@ -350,10 +363,6 @@ footer a {
   }
   .restaurant__paris__img {
     width: 500px;
-  }
-  .restaurant__paris__img__image--texte {
-    left: auto;
-    margin-top: 20px;
   }
 }
 /* Menus */
@@ -435,6 +444,8 @@ footer a {
   justify-content: space-between;
   margin-left: 2rem;
   margin-right: 3rem;
+  font-family: "Shrikhand", "Times New Roman", Times, serif;
+  font-size: small;
 }
 
 .main--menu {
@@ -454,6 +465,8 @@ footer a {
   }
 }
 .plat__titre {
+  margin-left: 5%;
+  font-size: large;
   border-bottom: solid rgb(177, 243, 177);
   padding-bottom: 10px;
   margin-right: 80%;
